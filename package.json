@@ -1,6 +1,6 @@
 {
   "name": "woonuxt-settings",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Module to get setting from WooNuxt Settings plugin installed on WordPress",
   "license": "MIT",
   "type": "module",
@@ -44,5 +44,13 @@
   "directories": {
     "test": "test"
   },
-  "author": ""
+  "author": "Scott Kennedy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottyzen/woonuxt-setting-module.git"
+  },
+  "bugs": {
+    "url": "https://github.com/scottyzen/woonuxt-setting-module/issues"
+  },
+  "homepage": "https://github.com/scottyzen/woonuxt-setting-module#readme"
 }
