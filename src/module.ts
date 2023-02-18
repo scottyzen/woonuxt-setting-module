@@ -43,26 +43,10 @@ export default defineNuxtModule<ModuleOptions>({
       return;
     }
 
-
-    // Extend pages
-    extendPages((pages) => {
-      // pages.push({ name: 'product-page-pager', path: '/products/page/:pageNumber', file: resolve(__dirname, 'pages/products.vue') });
-      // pages.push({ name: 'product-category-page', path: '/product-category/:categorySlug', file: resolve(__dirname, 'pages/products.vue') });
-      // pages.push({ name: 'product-category-page-pager', path: '/product-category/:categorySlug/page/:pageNumber', file: resolve(__dirname, 'pages/products.vue') });
-      // pages.push({ name: 'order-received', path: '/checkout/order-received/:orderId', file: resolve(__dirname, 'pages/order-summary.vue') });
-      // pages.push({ name: 'order-summary', path: '/order-summary/:orderId', file: resolve(__dirname, 'pages/order-summary.vue') });
-
-      pages.push({ name: 'product-page-pager', path: '/products/page/:pageNumber', file: resolver.resolve(__dirname, './pages/products.vue') });
-      pages.push({ name: 'product-category-page', path: '/product-category/:categorySlug', file: resolver.resolve(__dirname, './pages/products.vue') });
-      pages.push({ name: 'product-category-page-pager', path: '/product-category/:categorySlug/page/:pageNumber', file: resolver.resolve(__dirname, './pages/products.vue') });
-      pages.push({ name: 'order-received', path: '/checkout/order-received/:orderId', file: resolver.resolve(__dirname, './pages/order-summary.vue') });
-      pages.push({ name: 'order-summary', path: '/order-summary/:orderId', file: resolver.resolve(__dirname, './pages/order-summary.vue') });
-    });
-
-    nuxt.options.routeRules = {
-      '/checkout/order-received/**': { ssr: false },
-      '/order-summary/**': { ssr: false },
-    }
+    // nuxt.options.routeRules = {
+    //   '/checkout/order-received/**': { ssr: false },
+    //   '/order-summary/**': { ssr: false },
+    // }
 
     try {
       const { data } = await $fetch(GQL_HOST, { method: 'POST', body: JSON.stringify({ query }) });
