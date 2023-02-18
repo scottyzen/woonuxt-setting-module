@@ -1,4 +1,4 @@
-import { defineNuxtModule, extendPages, addPlugin, createResolver } from '@nuxt/kit';
+import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit';
 import { $fetch } from 'ohmyfetch';
 
 const query = `
@@ -43,11 +43,6 @@ export default defineNuxtModule<ModuleOptions>({
       return;
     }
 
-    // nuxt.options.routeRules = {
-    //   '/checkout/order-received/**': { ssr: false },
-    //   '/order-summary/**': { ssr: false },
-    // }
-
     try {
       const { data } = await $fetch(GQL_HOST, { method: 'POST', body: JSON.stringify({ query }) });
 
@@ -75,6 +70,6 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
+    // addPlugin(resolver.resolve('./runtime/plugin'))
   }
 })
