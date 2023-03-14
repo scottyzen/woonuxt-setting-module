@@ -1,5 +1,6 @@
 import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit';
 import { $fetch } from 'ohmyfetch';
+import pkg from '../package.json'
 
 const query = `
 query getWooNuxtSettings {
@@ -38,6 +39,8 @@ export default defineNuxtModule<ModuleOptions>({
 
     const GQL_HOST = process.env.GQL_HOST || null;
 
+    nuxt.options.runtimeConfig.public.version = pkg.version;
+
     if (!GQL_HOST) {
       console.log('\u001B[1;35mGQL_HOST is missing. Make sure you have the GQL_HOST environment variable set.');
       return;
@@ -48,14 +51,14 @@ export default defineNuxtModule<ModuleOptions>({
 
       // Default env variables
       process.env.PRIMARY_COLOR = data.woonuxtSettings?.primary_color || '#7F54B2';
-      process.env.PUBLIC_INTROSPECTION_ENABLED = data.woonuxtSettings?.publicIntrospectionEnabled || 'off';
+      process.env.PUBLIC_INTROSPECTION_ENABLED = data.woonuxtSettings?.publicIntrospectionEnabled === 'on' ? 'on' : 'false';
 
       // Default runtimeConfig
       nuxt.options.runtimeConfig.public.LOGO = data.woonuxtSettings?.logo || null;
       nuxt.options.runtimeConfig.public.PRODUCTS_PER_PAGE = data.woonuxtSettings?.productsPerPage || process.env.PRODUCTS_PER_PAGE || 24;
       nuxt.options.runtimeConfig.public.GLOBAL_PRODUCT_ATTRIBUTES = data.woonuxtSettings?.global_attributes || [];
       nuxt.options.runtimeConfig.public.MAX_PRICE = data.woonuxtSettings?.maxPrice || 1000;
-      nuxt.options.runtimeConfig.public.FRONT_END_URL = nuxt.options.devServer?.url || data.woonuxtSettings?.frontEndUrl || null;
+      nuxt.options.runtimeConfig.public.FRONT_END_URL = data.woonuxtSettings?.frontEndUrl || null;
 
       // Stripe
       if (data.woonuxtSettings?.stripeSettings?.enabled) {
@@ -63,9 +66,8 @@ export default defineNuxtModule<ModuleOptions>({
       }
 
     } catch (error) {
-      console.log({ error });
       console.log(
-        '\u001B[1;35mError fetching woonuxt settings. Make sure you have the woonuxt plugin installed and activated on your WordPress site. You can download it from https://woonuxt.com'
+        '\u001B[1;35mError fetching woonuxt settings. Make sure you have the latest version woonuxt-settings plugin installed and activated on your WordPress site. You can download it from https://github.com/scottyzen/woonuxt-settings'
       );
     }
 
