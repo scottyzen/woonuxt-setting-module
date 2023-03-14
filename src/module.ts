@@ -38,9 +38,9 @@ export default defineNuxtModule<ModuleOptions>({
     const resolver = createResolver(import.meta.url)
 
     // '/Users/scottkennedy/Desktop/WooNuxt/node_modules/woonuxt-settings/dist/runtime'
-    const rootDir = resolver.resolve('../../../../')
+    const rootDir = resolver.resolve('../../../')
     console.log('rootDir', rootDir)
-    const mainComposablesDir = resolver.resolve('../../../../composables')
+    const mainComposablesDir = resolver.resolve('../../../composables')
     addImportsDir(mainComposablesDir)
 
     const GQL_HOST = process.env.GQL_HOST || null;
