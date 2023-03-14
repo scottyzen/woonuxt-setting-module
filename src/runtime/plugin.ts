@@ -1,11 +1,14 @@
 export default defineNuxtPlugin(async () => {
+  console.log('woonuxt plugin');
   useGqlCors({ credentials: 'include', mode: 'cors' });
   if (process.client) {
+
     const { clearAllCookies } = useHelpers();
     const sessionToken = useCookie('woocommerce-session');
     if (sessionToken.value) useGqlHeaders({ 'woocommerce-session': `Session ${sessionToken.value}` });
 
     const { refreshCart } = useCart();
+    console.log("refreshCart", { refreshCart })
     const success = await refreshCart();
 
     if (!success) {
