@@ -36,9 +36,7 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {},
   async setup(_, nuxt) {
     const resolver = createResolver(import.meta.url)
-    addImportsDir(resolver.resolve('runtime/composables'))
-
-    console.log('woonuxt module', { resolver })
+    addImportsDir(resolver.resolve('../../composables'))
 
     const GQL_HOST = process.env.GQL_HOST || null;
 
