@@ -3,7 +3,7 @@ import { defineNuxtPlugin } from "#app";
 
 export default defineNuxtPlugin(async () => {
   console.log('woonuxt plugin');
-  useGqlCors({ credentials: 'include', mode: 'cors' });
+  // useGqlCors({ credentials: 'include', mode: 'cors' });
   if (process.client) {
 
     const { clearAllCookies } = useHelpers();
