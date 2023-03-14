@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit';
+import { defineNuxtModule, addPlugin, createResolver, addImportsDir } from '@nuxt/kit';
 import { $fetch } from 'ohmyfetch';
 import pkg from '../package.json'
 
@@ -37,6 +37,8 @@ export default defineNuxtModule<ModuleOptions>({
   async setup(_, nuxt) {
     const resolver = createResolver(import.meta.url)
 
+    // composables
+    addImportsDir(resolver.resolve('./composables'))
 
     const GQL_HOST = process.env.GQL_HOST || null;
 
