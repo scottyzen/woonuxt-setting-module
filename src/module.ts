@@ -37,10 +37,11 @@ export default defineNuxtModule<ModuleOptions>({
   async setup(_, nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    const runtimeDir = resolver.resolve('./runtime')
-    console.log({ runtimeDir });
-
-    addImportsDir(runtimeDir)
+    // '/Users/scottkennedy/Desktop/WooNuxt/node_modules/woonuxt-settings/dist/runtime'
+    const rootDir = resolver.resolve('../../../../')
+    console.log('rootDir', rootDir)
+    const mainComposablesDir = resolver.resolve('../../../../composables')
+    addImportsDir(mainComposablesDir)
 
     const GQL_HOST = process.env.GQL_HOST || null;
 
