@@ -1,6 +1,5 @@
-import { defineNuxtModule, addPlugin, createResolver, addImportsDir } from '@nuxt/kit';
+import { defineNuxtModule, createResolver } from '@nuxt/kit';
 import { $fetch } from 'ohmyfetch';
-import pkg from '../package.json'
 
 const query = `
 query getWooNuxtSettings {
@@ -35,17 +34,8 @@ export default defineNuxtModule<ModuleOptions>({
   meta: { name: 'woonuxt', configKey: 'woonuxt' },
   defaults: {},
   async setup(_, nuxt) {
-    const resolver = createResolver(import.meta.url)
-
-    // '/Users/scottkennedy/Desktop/WooNuxt/node_modules/woonuxt-settings/dist/runtime'
-    const rootDir = resolver.resolve('../../../')
-    console.log('rootDir', rootDir)
-    const mainComposablesDir = resolver.resolve('../../../composables')
-    addImportsDir(mainComposablesDir)
 
     const GQL_HOST = process.env.GQL_HOST || null;
-
-    nuxt.options.runtimeConfig.public.version = pkg.version;
 
     if (!GQL_HOST) {
       console.log('\u001B[1;35mGQL_HOST is missing. Make sure you have the GQL_HOST environment variable set.');
@@ -77,7 +67,5 @@ export default defineNuxtModule<ModuleOptions>({
       );
     }
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
   }
 })
