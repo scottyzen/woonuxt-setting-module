@@ -37,6 +37,7 @@ export default defineNuxtModule<ModuleOptions>({
   async setup(_, nuxt) {
     const resolver = createResolver(import.meta.url)
 
+
     const GQL_HOST = process.env.GQL_HOST || null;
 
     nuxt.options.runtimeConfig.public.version = pkg.version;
@@ -72,6 +73,6 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    // addPlugin(resolver.resolve('./runtime/plugin'))
+    addPlugin(resolver.resolve('./runtime/plugin'))
   }
 })
