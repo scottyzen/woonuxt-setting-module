@@ -2,9 +2,9 @@
 Get your module up and running quickly.
 
 Find and replace all on all files (CMD+SHIFT+F):
-- Name: My Module
-- Package name: my-module
-- Description: My new Nuxt module
+- Name: WooNuxt Settings
+- Package name: woonuxt-settings
+- Description: A Nuxt module that manages connecting to the WooNuxt Setting WordPress plugin
 -->
 
 # My Module
@@ -21,33 +21,39 @@ Find and replace all on all files (CMD+SHIFT+F):
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+
+- Adds the following enviorment variables:
+  - `PRIMARY_COLOR` - The primary color of the site
+  - `PUBLIC_INTROSPECTION_ENABLED` - Whether or not the GraphQL API is publicly available
+  - `PUBLIC_GRAPHQL_ENDPOINT` - The publicly available GraphQL endpoint
+  - `LOGO` - The logo of the site
+  - `PRODUCTS_PER_PAGE` - The number of products to show per page
+  - `GLOBAL_PRODUCT_ATTRIBUTES` - The global product attributes (This is used for filtering products)
+  - `MAX_PRICE` - The most expensive product price
+  - `FRONT_END_URL` - The URL of the front end (This is used for the checkout redirect)
+  - `STRIPE_PUBLISHABLE_KEY` - The Stripe publishable key
 
 ## Quick Setup
 
-1. Add `my-module` dependency to your project
+1. Add `woonuxt-settings` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D my-module
+pnpm add -D woonuxt-settings
 
 # Using yarn
-yarn add --dev my-module
+yarn add --dev woonuxt-settings
 
 # Using npm
-npm install --save-dev my-module
+npm install --save-dev woonuxt-settings
 ```
 
-2. Add `my-module` to the `modules` section of `nuxt.config.ts`
+2. Add `woonuxt-settings` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
-  modules: [
-    'my-module'
-  ]
-})
+  modules: ["woonuxt-settings"],
+});
 ```
 
 That's it! You can now use My Module in your Nuxt app ✨
@@ -79,11 +85,10 @@ npm run release
 ```
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/my-module
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/my-module
-
-[license-src]: https://img.shields.io/npm/l/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/my-module
+[npm-version-src]: https://img.shields.io/npm/v/woonuxt-settings/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/woonuxt-settings
+[npm-downloads-src]: https://img.shields.io/npm/dm/woonuxt-settings.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/woonuxt-settings
+[license-src]: https://img.shields.io/npm/l/woonuxt-settings.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/woonuxt-settings
