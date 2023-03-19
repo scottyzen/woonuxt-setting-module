@@ -10,6 +10,7 @@ query getWooNuxtSettings {
     frontEndUrl
     maxPrice
     productsPerPage
+    currencyCode
     global_attributes {
       slug
       showCount
@@ -55,6 +56,7 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.runtimeConfig.public.GLOBAL_PRODUCT_ATTRIBUTES = data.woonuxtSettings?.global_attributes || [];
       nuxt.options.runtimeConfig.public.MAX_PRICE = data.woonuxtSettings?.maxPrice || 1000;
       nuxt.options.runtimeConfig.public.FRONT_END_URL = data.woonuxtSettings?.frontEndUrl || null;
+      nuxt.options.runtimeConfig.public.CURRENCY_CODE = data.woonuxtSettings?.currencyCode || null;
 
       // Stripe
       if (data.woonuxtSettings?.stripeSettings?.enabled) {
