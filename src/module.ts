@@ -73,10 +73,10 @@ export default defineNuxtModule<ModuleOptions>({
 
       // Stripe
       if (data.woonuxtSettings?.stripeSettings?.enabled === "yes") {
-        nuxt.options.runtimeConfig.public.STRIPE_PUBLISHABLE_KEY = data
-          .woonuxtSettings?.stripeSettings?.testmode
-          ? data.woonuxtSettings?.stripeSettings?.test_publishable_key
-          : data.woonuxtSettings?.stripeSettings?.publishable_key;
+        nuxt.options.runtimeConfig.public.STRIPE_PUBLISHABLE_KEY =
+          data.woonuxtSettings?.stripeSettings?.testmode === "yes"
+            ? data.woonuxtSettings?.stripeSettings?.test_publishable_key
+            : data.woonuxtSettings?.stripeSettings?.publishable_key;
       }
     } catch (error) {
       console.log(
