@@ -1,6 +1,6 @@
 {
   "name": "woonuxt-settings",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "Module to get setting from WooNuxt Settings plugin installed on WordPress",
   "license": "MIT",
   "type": "module",
