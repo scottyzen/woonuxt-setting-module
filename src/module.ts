@@ -1,5 +1,6 @@
 import { defineNuxtModule } from "@nuxt/kit";
 import { $fetch } from "ohmyfetch";
+import pkg from "../package.json";
 
 const query = `
 query getWooNuxtSettings {
@@ -27,6 +28,8 @@ query getWooNuxtSettings {
 }
 `;
 
+// Property 'graphql-client' does not exist on type 'NuxtOptions'
+
 // Module options TypeScript inteface definition
 export interface ModuleOptions {}
 
@@ -34,7 +37,12 @@ export default defineNuxtModule<ModuleOptions>({
   meta: { name: "woonuxt", configKey: "woonuxt" },
   defaults: {},
   async setup(_, nuxt) {
+    // const resolver = createResolver(import.meta.url);
+
     const GQL_HOST = process.env.GQL_HOST || null;
+
+    nuxt.options.runtimeConfig.public.version = pkg.version;
+    console.log(`\u001B[1;35mWooNuxt v${pkg.version}`);
 
     if (!GQL_HOST) {
       console.log(
@@ -49,13 +57,15 @@ export default defineNuxtModule<ModuleOptions>({
         body: JSON.stringify({ query }),
       });
 
+      // Disable codegen if public introspection is disabled
+      if (data.woonuxtSettings?.publicIntrospectionEnabled !== "on") {
+        // @ts-ignore
+        if (!nuxt.options["graphql-client"]) nuxt.options["graphql-client"] = { codegen: false };
+      }
+
       // Default env variables
       process.env.PRIMARY_COLOR =
         data.woonuxtSettings?.primary_color || "#7F54B2";
-      process.env.PUBLIC_INTROSPECTION_ENABLED =
-        data.woonuxtSettings?.publicIntrospectionEnabled === "on"
-          ? "on"
-          : "false";
 
       // Default runtimeConfig
       nuxt.options.runtimeConfig.public.LOGO =
@@ -72,11 +82,11 @@ export default defineNuxtModule<ModuleOptions>({
         data.woonuxtSettings?.frontEndUrl || null;
 
       // Stripe
-      if (data.woonuxtSettings?.stripeSettings?.enabled === "yes") {
-        nuxt.options.runtimeConfig.public.STRIPE_PUBLISHABLE_KEY =
-          data.woonuxtSettings?.stripeSettings?.testmode === "yes"
-            ? data.woonuxtSettings?.stripeSettings?.test_publishable_key
-            : data.woonuxtSettings?.stripeSettings?.publishable_key;
+      if (data.woonuxtSettings?.stripeSettings?.enabled) {
+        nuxt.options.runtimeConfig.public.STRIPE_PUBLISHABLE_KEY = data
+          .woonuxtSettings?.stripeSettings?.testmode
+          ? data.woonuxtSettings?.stripeSettings?.test_publishable_key
+          : data.woonuxtSettings?.stripeSettings?.publishable_key;
       }
     } catch (error) {
       console.log(
