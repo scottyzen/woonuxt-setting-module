@@ -1,6 +1,5 @@
 import { defineNuxtModule } from "@nuxt/kit";
 import { $fetch } from "ohmyfetch";
-import pkg from "../package.json";
 
 const query = `
 query getWooNuxtSettings {
@@ -28,8 +27,6 @@ query getWooNuxtSettings {
 }
 `;
 
-// Property 'graphql-client' does not exist on type 'NuxtOptions'
-
 // Module options TypeScript inteface definition
 export interface ModuleOptions {}
 
@@ -40,9 +37,6 @@ export default defineNuxtModule<ModuleOptions>({
     // const resolver = createResolver(import.meta.url);
 
     const GQL_HOST = process.env.GQL_HOST || null;
-
-    nuxt.options.runtimeConfig.public.version = pkg.version;
-    console.log(`\u001B[1;35mWooNuxt v${pkg.version}`);
 
     if (!GQL_HOST) {
       console.log(
@@ -60,7 +54,9 @@ export default defineNuxtModule<ModuleOptions>({
       // Disable codegen if public introspection is disabled
       if (data.woonuxtSettings?.publicIntrospectionEnabled !== "on") {
         // @ts-ignore
-        if (!nuxt.options["graphql-client"]) nuxt.options["graphql-client"] = { codegen: false };
+        if (!nuxt.options["graphql-client"])
+          // @ts-ignore
+          nuxt.options["graphql-client"] = { codegen: false };
       }
 
       // Default env variables
@@ -90,7 +86,7 @@ export default defineNuxtModule<ModuleOptions>({
       }
     } catch (error) {
       console.log(
-        "\u001B[1;35mError fetching woonuxt settings. Make sure you have the latest version woonuxt-settings plugin installed and activated on your WordPress site. You can download it from https://github.com/scottyzen/woonuxt-settings"
+        "\u001B[1;35mError fetching woonuxt settings. Make sure you have the latest version woonuxt-settings plugin installed and activated WordPress. You can download it from https://github.com/scottyzen/woonuxt-settings"
       );
     }
   },
