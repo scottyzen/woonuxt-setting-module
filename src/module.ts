@@ -51,13 +51,14 @@ export default defineNuxtModule<ModuleOptions>({
         body: JSON.stringify({ query }),
       });
 
+      // TODO: Return with a better solution. This solution is causing issues.
       // Disable codegen if public introspection is disabled
-      if (data.woonuxtSettings?.publicIntrospectionEnabled !== "on") {
-        // @ts-ignore
-        if (!nuxt.options["graphql-client"])
-          // @ts-ignore
-          nuxt.options["graphql-client"] = { codegen: false };
-      }
+      // if (data.woonuxtSettings?.publicIntrospectionEnabled !== "on") {
+      //   // @ts-ignore
+      //   if (!nuxt.options["graphql-client"])
+      //     // @ts-ignore
+      //     nuxt.options["graphql-client"] = { codegen: false };
+      // }
 
       // Default env variables
       process.env.PRIMARY_COLOR =
