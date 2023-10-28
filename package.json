@@ -1,6 +1,6 @@
 {
   "name": "woonuxt-settings",
-  "version": "1.0.31",
+  "version": "1.0.46",
   "description": "Module to get setting from WooNuxt Settings plugin installed on WordPress",
   "license": "MIT",
   "type": "module",
@@ -25,17 +25,17 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@nuxt/kit": "^3.7.4",
+    "@nuxt/kit": "^3.8.0",
     "ohmyfetch": "^0.4.21"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxt/module-builder": "^0.5.2",
-    "@nuxt/schema": "^3.7.4",
-    "@nuxt/test-utils": "^3.7.4",
+    "@nuxt/schema": "^3.8.0",
+    "@nuxt/test-utils": "^3.8.0",
     "changelogen": "^0.5.5",
-    "eslint": "^8.50.0",
-    "nuxt": "^3.7.4"
+    "eslint": "^8.52.0",
+    "nuxt": "^3.8.0"
   },
   "directories": {
     "test": "test"
