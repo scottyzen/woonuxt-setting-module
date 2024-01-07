@@ -131,7 +131,7 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.runtimeConfig.public.FRONT_END_URL = data.woonuxtSettings?.frontEndUrl || null;
 
       // Site title
-      nuxt.options.runtimeConfig.public.SITE_TITLE = data.generalSettings?.title || 'WooNuxt';
+      process.env.SITE_TITLE = data.generalSettings?.title || 'WooNuxt';
 
       // Stripe
       if (data.woonuxtSettings?.stripeSettings?.enabled) {
