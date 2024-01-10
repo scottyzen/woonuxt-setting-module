@@ -43,6 +43,14 @@ query getWooNuxtSettings {
       test_publishable_key
       publishable_key
     }
+    wooNuxtSEO {
+      facebook
+      twitter
+      youtube
+      pinterest
+      linkedin
+      instagram
+    }
   }
   pluginWPGraphQL: plugin(id: "${WPGraphQLPlugin.id}") {
     name
@@ -132,6 +140,9 @@ export default defineNuxtModule<ModuleOptions>({
 
       // Site title
       process.env.SITE_TITLE = data.generalSettings?.title || 'WooNuxt';
+
+      // wooNuxtSEO
+      nuxt.options.runtimeConfig.public.wooNuxtSEO = data.woonuxtSettings?.wooNuxtSEO || {};
 
       // Stripe
       if (data.woonuxtSettings?.stripeSettings?.enabled) {
