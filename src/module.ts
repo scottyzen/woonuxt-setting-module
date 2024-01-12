@@ -137,12 +137,10 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.runtimeConfig.public.GLOBAL_PRODUCT_ATTRIBUTES = data.woonuxtSettings?.global_attributes || [];
       nuxt.options.runtimeConfig.public.MAX_PRICE = data.woonuxtSettings?.maxPrice || 1000;
       nuxt.options.runtimeConfig.public.FRONT_END_URL = data.woonuxtSettings?.frontEndUrl || null;
+      nuxt.options.runtimeConfig.public.WOO_NUXT_SEO = data.woonuxtSettings?.wooNuxtSEO || null;
 
       // Site title
       process.env.SITE_TITLE = data.generalSettings?.title || 'WooNuxt';
-
-      // wooNuxtSEO
-      nuxt.options.runtimeConfig.public.wooNuxtSEO = data.woonuxtSettings?.wooNuxtSEO || {};
 
       // Stripe
       if (data.woonuxtSettings?.stripeSettings?.enabled) {
