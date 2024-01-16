@@ -25,17 +25,17 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@nuxt/kit": "^3.8.0",
+    "@nuxt/kit": "^3.9.2",
     "ohmyfetch": "^0.4.21"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.2.0",
-    "@nuxt/module-builder": "^0.5.2",
-    "@nuxt/schema": "^3.8.0",
-    "@nuxt/test-utils": "^3.8.0",
+    "@nuxt/module-builder": "^0.5.5",
+    "@nuxt/schema": "^3.9.2",
+    "@nuxt/test-utils": "^3.9.0",
     "changelogen": "^0.5.5",
-    "eslint": "^8.52.0",
-    "nuxt": "^3.8.0"
+    "eslint": "^8.56.0",
+    "nuxt": "^3.9.2"
   },
   "directories": {
     "test": "test"

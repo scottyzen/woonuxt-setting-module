@@ -8,18 +8,9 @@ type Plugin = {
   minRequiredVersion: string;
 };
 
-const WPGraphQLPlugin: Plugin = {
-  id: 'cGx1Z2luOndwLWdyYXBocWwvd3AtZ3JhcGhxbC5waHA=',
-  minRequiredVersion: '1.17.0',
-};
-const WooGraphQLPlugin: Plugin = {
-  id: 'cGx1Z2luOndwLWdyYXBocWwtd29vY29tbWVyY2Uvd3AtZ3JhcGhxbC13b29jb21tZXJjZS5waHA',
-  minRequiredVersion: '0.18.2',
-};
-const WPGraphQLCors: Plugin = {
-  id: 'cGx1Z2luOndwLWdyYXBocWwtY29ycy0yLjEvd3AtZ3JhcGhxbC1jb3JzLnBocA==',
-  minRequiredVersion: '2.1',
-};
+const WPGraphQLPlugin: Plugin = { id: 'cGx1Z2luOndwLWdyYXBocWwvd3AtZ3JhcGhxbC5waHA=', minRequiredVersion: '1.19.0' };
+const WooGraphQLPlugin: Plugin = { id: 'cGx1Z2luOndwLWdyYXBocWwtd29vY29tbWVyY2Uvd3AtZ3JhcGhxbC13b29jb21tZXJjZS5waHA', minRequiredVersion: '0.19.0' };
+const WPGraphQLCors: Plugin = { id: 'cGx1Z2luOndwLWdyYXBocWwtY29ycy0yLjEvd3AtZ3JhcGhxbC1jb3JzLnBocA==', minRequiredVersion: '2.1' };
 
 const query = `
 query getWooNuxtSettings {
@@ -44,29 +35,15 @@ query getWooNuxtSettings {
       publishable_key
     }
     wooNuxtSEO {
-      facebook
-      twitter
-      youtube
-      pinterest
-      linkedin
-      instagram
+      provider
+      url
+      handle
     }
   }
-  pluginWPGraphQL: plugin(id: "${WPGraphQLPlugin.id}") {
-    name
-    version
-  }
-  pluginWooGraphQL: plugin(id: "${WooGraphQLPlugin.id}") {
-    name
-    version
-  }
-  pluginWPCORS: plugin(id: "${WPGraphQLCors.id}") {
-    name
-    version
-  }
-  generalSettings{
-    title
-  }
+  pluginWPGraphQL: plugin(id: "${WPGraphQLPlugin.id}")    { name version }
+  pluginWooGraphQL: plugin(id: "${WooGraphQLPlugin.id}")  { name version }
+  pluginWPCORS: plugin(id: "${WPGraphQLCors.id}")         { name version }
+  generalSettings { title }
 }
 `;
 
