@@ -8,8 +8,8 @@ type Plugin = {
   minRequiredVersion: string;
 };
 
-const WPGraphQLPlugin: Plugin = { id: 'cGx1Z2luOndwLWdyYXBocWwvd3AtZ3JhcGhxbC5waHA=', minRequiredVersion: '1.19.0' };
-const WooGraphQLPlugin: Plugin = { id: 'cGx1Z2luOndwLWdyYXBocWwtd29vY29tbWVyY2Uvd3AtZ3JhcGhxbC13b29jb21tZXJjZS5waHA', minRequiredVersion: '0.19.0' };
+const WPGraphQLPlugin: Plugin = { id: 'cGx1Z2luOndwLWdyYXBocWwvd3AtZ3JhcGhxbC5waHA=', minRequiredVersion: '1.17.0' };
+const WooGraphQLPlugin: Plugin = { id: 'cGx1Z2luOndwLWdyYXBocWwtd29vY29tbWVyY2Uvd3AtZ3JhcGhxbC13b29jb21tZXJjZS5waHA', minRequiredVersion: '0.18.2' };
 const WPGraphQLCors: Plugin = { id: 'cGx1Z2luOndwLWdyYXBocWwtY29ycy0yLjEvd3AtZ3JhcGhxbC1jb3JzLnBocA==', minRequiredVersion: '2.1' };
 
 const query = `
