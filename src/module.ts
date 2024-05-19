@@ -56,7 +56,7 @@ export default defineNuxtModule<ModuleOptions>({
   async setup(_, nuxt) {
     // const resolver = createResolver(import.meta.url);
 
-    const GQL_HOST = process.env.GQL_HOST || null;
+    const GQL_HOST = process.env.GQL_HOST ?? null;
 
     if (!GQL_HOST) {
       console.log('\u001B[1;35mGQL_HOST is missing. Make sure you have the GQL_HOST environment variable set.');
@@ -115,6 +115,7 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.runtimeConfig.public.MAX_PRICE = data.woonuxtSettings?.maxPrice || 1000;
       nuxt.options.runtimeConfig.public.FRONT_END_URL = data.woonuxtSettings?.frontEndUrl || null;
       nuxt.options.runtimeConfig.public.WOO_NUXT_SEO = data.woonuxtSettings?.wooNuxtSEO || null;
+      nuxt.options.runtimeConfig.public.AUTO_OPEN_CART = process.env?.AUTO_OPEN_CART ?? 'false';
 
       // Site title
       process.env.SITE_TITLE = data.generalSettings?.title || 'WooNuxt';
