@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.0.55
+
+[compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.54...v1.0.55)
+
+### 🏡 Chore
+
+- Update npm dependencies to latest versions ([f467c6c](https://github.com/scottyzen/woonuxt-setting-module/commit/f467c6c))
+- Add .env.example file with GraphQL endpoint configuration ([5bddef3](https://github.com/scottyzen/woonuxt-setting-module/commit/5bddef3))
+- Remove unused AUTO_OPEN_CART variable and update runtime configuration ([a1ba031](https://github.com/scottyzen/woonuxt-setting-module/commit/a1ba031))
+
+### ❤️ Contributors
+
+- Scott Kennedy ([@scottyzen](http://github.com/scottyzen))
+
 ## v1.0.54
 
 [compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.53...v1.0.54)
