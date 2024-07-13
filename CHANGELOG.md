@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.0.56
+
+[compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.55...v1.0.56)
+
+### 🏡 Chore
+
+- **release:** V1.0.55 ([dd21487](https://github.com/scottyzen/woonuxt-setting-module/commit/dd21487))
+- Update nuxt.config.ts with compatibilityDate ([fc10353](https://github.com/scottyzen/woonuxt-setting-module/commit/fc10353))
+- Update woonuxt-settings plugin version check and add new settings to runtime configuration ([31ee836](https://github.com/scottyzen/woonuxt-setting-module/commit/31ee836))
+
+### ❤️ Contributors
+
+- Scott Kennedy ([@scottyzen](http://github.com/scottyzen))
+
 ## v1.0.55
 
 [compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.54...v1.0.55)
