@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.57
+
+[compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.56...v1.0.57)
+
 ## v1.0.56
 
 [compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.55...v1.0.56)
