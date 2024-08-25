@@ -21,21 +21,18 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags",
-    "lint": "eslint ."
+    "release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.12.4",
+    "@nuxt/kit": "^3.13.0",
     "ohmyfetch": "^0.4.21"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.5.1",
     "@nuxt/module-builder": "^0.8.3",
-    "@nuxt/schema": "^3.12.4",
+    "@nuxt/schema": "^3.13.0",
     "@nuxt/test-utils": "^3.14.1",
     "changelogen": "^0.5.5",
-    "eslint": "^9.9.0",
-    "nuxt": "^3.12.4"
+    "nuxt": "^3.13.0"
   },
   "directories": {
     "test": "test"
@@ -48,5 +45,13 @@
   "bugs": {
     "url": "https://github.com/scottyzen/woonuxt-setting-module/issues"
   },
-  "homepage": "https://github.com/scottyzen/woonuxt-setting-module#readme"
+  "homepage": "https://github.com/scottyzen/woonuxt-setting-module#readme",
+  "keywords": [
+    "nuxt",
+    "wordpress",
+    "woocommerce",
+    "vue",
+    "static",
+    "headless"
+  ]
 }
