@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.0.60
+
+[compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.59...v1.0.60)
+
+### 🏡 Chore
+
+- **release:** V1.0.59 ([95cba84](https://github.com/scottyzen/woonuxt-setting-module/commit/95cba84))
+- Update npm dependencies to latest versions ([a3286e3](https://github.com/scottyzen/woonuxt-setting-module/commit/a3286e3))
+- Update @nuxt/kit and @nuxt/schema dependencies to version 3.13.0 ([f09f40a](https://github.com/scottyzen/woonuxt-setting-module/commit/f09f40a))
+
+### ❤️ Contributors
+
+- Scott Kennedy ([@scottyzen](http://github.com/scottyzen))
+
 ## v1.0.59
 
 [compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.58...v1.0.59)
