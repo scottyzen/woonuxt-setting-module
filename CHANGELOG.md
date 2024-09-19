@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.0.61
+
+[compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.60...v1.0.61)
+
+### 🏡 Chore
+
+- **release:** V1.0.60 ([56bb6c2](https://github.com/scottyzen/woonuxt-setting-module/commit/56bb6c2))
+- Update dependencies ([377c99e](https://github.com/scottyzen/woonuxt-setting-module/commit/377c99e))
+
+### ❤️ Contributors
+
+- Scott Kennedy ([@scottyzen](http://github.com/scottyzen))
+
 ## v1.0.60
 
 [compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.59...v1.0.60)
