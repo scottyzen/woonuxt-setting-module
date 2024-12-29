@@ -35,7 +35,11 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Get the version of the woonuxt-settings plugin
     try {
-      const { data } = await $fetch(GQL_HOST, { method: 'POST', body: JSON.stringify({ query: getVersionQuery }) });
+      const { data } = await $fetch(GQL_HOST, {
+        method: 'POST',
+        body: JSON.stringify({ query: getVersionQuery }),
+        headers: { 'Origin': process.env.APP_HOST || 'http://localhost:3000' }
+      });
       const stringVersion = data.woonuxtSettings?.wooCommerceSettingsVersion.replace(/\D/g, '');
       WOONUXT_SETTINGS_PLUGIN_VERSION = parseFloat(stringVersion);
       if (WOONUXT_SETTINGS_PLUGIN_VERSION < LATEST_VERSION) {
