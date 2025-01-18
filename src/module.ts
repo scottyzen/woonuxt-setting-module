@@ -27,7 +27,7 @@ export default defineNuxtModule<ModuleOptions>({
       const { data } = await $fetch(GQL_HOST, {
         method: 'POST',
         body: JSON.stringify({ query: getVersionQuery }),
-        headers: { 'Origin': process.env.APP_HOST || 'http://localhost:3000' }
+        headers: { Origin: process.env.APP_HOST || 'http://localhost:3000' },
       });
       const stringVersion = data.woonuxtSettings?.wooCommerceSettingsVersion.replace(/\D/g, '');
       WOONUXT_SETTINGS_PLUGIN_VERSION = parseFloat(stringVersion);
@@ -75,6 +75,7 @@ export default defineNuxtModule<ModuleOptions>({
       const { data } = await $fetch(GQL_HOST, {
         method: 'POST',
         body: JSON.stringify({ query }),
+        headers: { Origin: process.env.APP_HOST || 'http://localhost:3000' },
       });
 
       // Default env variables
