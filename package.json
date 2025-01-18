@@ -1,6 +1,6 @@
 {
   "name": "woonuxt-settings",
-  "version": "1.0.61",
+  "version": "1.0.62",
   "description": "Module to get setting from WooNuxt Settings plugin installed on WordPress",
   "license": "MIT",
   "type": "module",
@@ -18,21 +18,22 @@
   ],
   "scripts": {
     "prepack": "nuxt-module-build",
-    "dev": "nuxi dev playground",
+    "dev": "nuxi dev -p 8888 playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags"
+    "release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "link": "npm link && npm link woonuxt-settings"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.13.2",
+    "@nuxt/kit": "^3.15.2",
     "ohmyfetch": "^0.4.21"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.8.4",
-    "@nuxt/schema": "^3.13.2",
-    "@nuxt/test-utils": "^3.14.2",
+    "@nuxt/schema": "^3.15.2",
+    "@nuxt/test-utils": "^3.15.4",
     "changelogen": "^0.5.7",
-    "nuxt": "^3.13.2"
+    "nuxt": "^3.15.2"
   },
   "directories": {
     "test": "test"
