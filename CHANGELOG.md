@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.0.65
+
+[compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.64...v1.0.65)
+
+### 🏡 Chore
+
+- **release:** V1.0.64 ([f8def10](https://github.com/scottyzen/woonuxt-setting-module/commit/f8def10))
+- Add nuxt.config.ts and update version to 1.0.64 ([954adc4](https://github.com/scottyzen/woonuxt-setting-module/commit/954adc4))
+
+### ❤️ Contributors
+
+- Scott Kennedy ([@scottyzen](http://github.com/scottyzen))
+
 ## v1.0.64
 
 [compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.63...v1.0.64)
