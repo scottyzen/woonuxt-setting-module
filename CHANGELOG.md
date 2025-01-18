@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.0.66
+
+[compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.65...v1.0.66)
+
+### 🩹 Fixes
+
+- Correct header key for fetch requests in module.ts ([4692287](https://github.com/scottyzen/woonuxt-setting-module/commit/4692287))
+
+### 🏡 Chore
+
+- **release:** V1.0.65 ([9974b6a](https://github.com/scottyzen/woonuxt-setting-module/commit/9974b6a))
+
+### ❤️ Contributors
+
+- Scott Kennedy ([@scottyzen](http://github.com/scottyzen))
+
 ## v1.0.65
 
 [compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.64...v1.0.65)
