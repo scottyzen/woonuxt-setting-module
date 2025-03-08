@@ -10,7 +10,7 @@ const getVersionQuery = `query getVersion {
 // Module options TypeScript inteface definition
 export interface getActiveHead {}
 
-export default defineNuxtModule<ModuleOptions>({
+export default defineNuxtModule({
   meta: { name: 'woonuxt', configKey: 'woonuxt' },
   async setup(_, nuxt) {
     const GQL_HOST = process.env.GQL_HOST ?? null;
