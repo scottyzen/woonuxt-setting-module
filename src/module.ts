@@ -8,13 +8,12 @@ const getVersionQuery = `query getVersion {
 }`;
 
 // Module options TypeScript inteface definition
-export interface ModuleOptions {}
+export interface getActiveHead {}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: { name: 'woonuxt', configKey: 'woonuxt' },
   async setup(_, nuxt) {
     const GQL_HOST = process.env.GQL_HOST ?? null;
-    const LATEST_VERSION = 1056;
     let WOONUXT_SETTINGS_PLUGIN_VERSION = 0;
 
     if (!GQL_HOST) {
@@ -31,9 +30,6 @@ export default defineNuxtModule<ModuleOptions>({
       });
       const stringVersion = data.woonuxtSettings?.wooCommerceSettingsVersion.replace(/\D/g, '');
       WOONUXT_SETTINGS_PLUGIN_VERSION = parseFloat(stringVersion);
-      if (WOONUXT_SETTINGS_PLUGIN_VERSION < LATEST_VERSION) {
-        console.log('\u001B[1;35mThere is a new version of woonuxt-settings plugin available. Please update it.');
-      }
     } catch (error) {}
 
     const wooNuxtSEO = WOONUXT_SETTINGS_PLUGIN_VERSION > 1043 ? 'wooNuxtSEO { provider url handle }' : '';

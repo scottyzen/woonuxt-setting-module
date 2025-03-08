@@ -25,15 +25,15 @@
     "link": "npm link && npm link woonuxt-settings"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.15.2",
     "ohmyfetch": "^0.4.21"
   },
   "devDependencies": {
+    "@nuxt/kit": "^3.16.0",
     "@nuxt/module-builder": "^0.8.4",
-    "@nuxt/schema": "^3.15.2",
-    "@nuxt/test-utils": "^3.15.4",
-    "changelogen": "^0.5.7",
-    "nuxt": "^3.15.2"
+    "@nuxt/schema": "^3.16.0",
+    "@nuxt/test-utils": "^3.17.1",
+    "changelogen": "^0.6.1",
+    "nuxt": "^3.16.0"
   },
   "directories": {
     "test": "test"
