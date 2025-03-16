@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.1.2
+
+[compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.1.1...v1.1.2)
+
+### 🩹 Fixes
+
+- Refactor BACKEND_URL assignment to correctly access generalSettingsUrl from allSettings ([845e51f](https://github.com/scottyzen/woonuxt-setting-module/commit/845e51f))
+
+### 🏡 Chore
+
+- **release:** V1.1.1 ([e2dbfc0](https://github.com/scottyzen/woonuxt-setting-module/commit/e2dbfc0))
+
+### ❤️ Contributors
+
+- Scott Kennedy ([@scottyzen](https://github.com/scottyzen))
+
 ## v1.1.1
 
 [compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.1.0...v1.1.1)
