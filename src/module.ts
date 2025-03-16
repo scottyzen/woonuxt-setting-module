@@ -37,9 +37,6 @@ export default defineNuxtModule({
     const currencySymbol = WOONUXT_SETTINGS_PLUGIN_VERSION > 1055 ? 'currencySymbol' : '';
 
     const woonuxtSettings = `{
-        allSettings {
-          generalSettingsUrl
-        }
         primary_color
         logo
         publicIntrospectionEnabled
@@ -68,6 +65,7 @@ export default defineNuxtModule({
     query getWooNuxtSettings {
       woonuxtSettings ${woonuxtSettings}
       generalSettings { title }
+      allSettings { generalSettingsUrl }
     }`;
 
     try {
@@ -86,7 +84,7 @@ export default defineNuxtModule({
       nuxt.options.runtimeConfig.public.GLOBAL_PRODUCT_ATTRIBUTES = data.woonuxtSettings?.global_attributes || [];
       nuxt.options.runtimeConfig.public.MAX_PRICE = data.woonuxtSettings?.maxPrice || 1000;
       nuxt.options.runtimeConfig.public.FRONT_END_URL = data.woonuxtSettings?.frontEndUrl || null;
-      nuxt.options.runtimeConfig.public.BACKEND_URL = data.woonuxtSettings?.allSettings?.generalSettingsUrl || null;
+      nuxt.options.runtimeConfig.public.BACKEND_URL = data.allSettings?.generalSettingsUrl || null;
       nuxt.options.runtimeConfig.public.CURRENCY_CODE = data.woonuxtSettings?.currencyCode || null;
       nuxt.options.runtimeConfig.public.CURRENCY_SYMBOL = data.woonuxtSettings?.currencySymbol || null;
       nuxt.options.runtimeConfig.public.WOO_NUXT_SEO = data.woonuxtSettings?.wooNuxtSEO || null;
