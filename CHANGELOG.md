@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.1.1
+
+[compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.1.0...v1.1.1)
+
+### 🩹 Fixes
+
+- Update BACKEND_URL assignment to use nested allSettings structure ([9da0e0e](https://github.com/scottyzen/woonuxt-setting-module/commit/9da0e0e))
+
+### 🏡 Chore
+
+- **release:** V1.1.0 ([d0af2ac](https://github.com/scottyzen/woonuxt-setting-module/commit/d0af2ac))
+
+### ❤️ Contributors
+
+- Scott Kennedy ([@scottyzen](https://github.com/scottyzen))
+
 ## v1.1.0
 
 [compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.67...v1.1.0)
