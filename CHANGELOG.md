@@ -1,5 +1,26 @@
 # Changelog
 
+## v1.1.0
+
+[compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.67...v1.1.0)
+
+### 🚀 Enhancements
+
+- Add generalSettingsUrl to allSettings in Nuxt module ([1424b47](https://github.com/scottyzen/woonuxt-setting-module/commit/1424b47))
+
+### 💅 Refactors
+
+- Simplify module export by removing TypeScript interface definition ([970d8f6](https://github.com/scottyzen/woonuxt-setting-module/commit/970d8f6))
+
+### 🏡 Chore
+
+- **release:** V1.0.67 ([660aeab](https://github.com/scottyzen/woonuxt-setting-module/commit/660aeab))
+- Update package version to 1.0.67 and dependencies ([900a5bc](https://github.com/scottyzen/woonuxt-setting-module/commit/900a5bc))
+
+### ❤️ Contributors
+
+- Scott Kennedy ([@scottyzen](https://github.com/scottyzen))
+
 ## v1.0.67
 
 [compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.0.66...v1.0.67)
