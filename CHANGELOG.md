@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.2.1
+
+[compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.2.0...v1.2.1)
+
+### 💅 Refactors
+
+- Remove compatibility date and devtools from nuxt.config.ts ([3c5565b](https://github.com/scottyzen/woonuxt-setting-module/commit/3c5565b))
+
+### 🏡 Chore
+
+- **release:** V1.2.0 ([3492b9e](https://github.com/scottyzen/woonuxt-setting-module/commit/3492b9e))
+
+### ❤️ Contributors
+
+- Scott Kennedy ([@scottyzen](https://github.com/scottyzen))
+
 ## v1.2.0
 
 [compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.1.2...v1.2.0)
