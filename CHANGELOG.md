@@ -1,5 +1,32 @@
 # Changelog
 
+## v1.2.0
+
+[compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.1.2...v1.2.0)
+
+### 🚀 Enhancements
+
+- Update nuxt.config.ts with compatibility date and enable devtools ([ab53ce9](https://github.com/scottyzen/woonuxt-setting-module/commit/ab53ce9))
+
+### 🏡 Chore
+
+- **release:** V1.1.2 ([52f6752](https://github.com/scottyzen/woonuxt-setting-module/commit/52f6752))
+- Update dependencies to latest versions ([1786d35](https://github.com/scottyzen/woonuxt-setting-module/commit/1786d35))
+- Remove compatibilityDate from nuxt.config.ts ([86b1b8d](https://github.com/scottyzen/woonuxt-setting-module/commit/86b1b8d))
+- Update compatibilityDate in nuxt.config.ts ([c6e0447](https://github.com/scottyzen/woonuxt-setting-module/commit/c6e0447))
+- Replace `ohmyfetch` with `ofetch` ([5d9ea20](https://github.com/scottyzen/woonuxt-setting-module/commit/5d9ea20))
+- Bump version to 1.1.3 and update dependencies ([15d4e1b](https://github.com/scottyzen/woonuxt-setting-module/commit/15d4e1b))
+
+### ✅ Tests
+
+- Fix tests depending on global dependency ([d6ddba4](https://github.com/scottyzen/woonuxt-setting-module/commit/d6ddba4))
+- Ensure vitest uses `.env` file when available ([3c1590c](https://github.com/scottyzen/woonuxt-setting-module/commit/3c1590c))
+
+### ❤️ Contributors
+
+- Scott Kennedy ([@scottyzen](https://github.com/scottyzen))
+- Nestor Vera ([@hacknug](https://github.com/hacknug))
+
 ## v1.1.2
 
 [compare changes](https://github.com/scottyzen/woonuxt-setting-module/compare/v1.1.1...v1.1.2)
