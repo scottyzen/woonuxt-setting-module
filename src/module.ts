@@ -1,5 +1,5 @@
 import { defineNuxtModule } from '@nuxt/kit';
-import { $fetch } from 'ohmyfetch';
+import { $fetch } from 'ofetch';
 
 const getVersionQuery = `query getVersion {
   woonuxtSettings {

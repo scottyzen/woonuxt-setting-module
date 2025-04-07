@@ -22,10 +22,11 @@
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags",
-    "link": "npm link && npm link woonuxt-settings"
+    "link": "npm link && npm link woonuxt-settings",
+    "test": "vitest"
   },
   "dependencies": {
-    "ohmyfetch": "^0.4.21"
+    "ofetch": "^1.4.1"
   },
   "devDependencies": {
     "@nuxt/kit": "^3.16.1",
@@ -33,7 +34,8 @@
     "@nuxt/schema": "^3.16.1",
     "@nuxt/test-utils": "^3.17.2",
     "changelogen": "^0.6.1",
-    "nuxt": "^3.16.1"
+    "nuxt": "^3.16.1",
+    "vitest": "^3.1.1"
   },
   "directories": {
     "test": "test"
